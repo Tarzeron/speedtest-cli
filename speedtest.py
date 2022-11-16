@@ -27,7 +27,7 @@ import socket
 import sys
 import threading
 import timeit
-import xml.parsers.expat
+from xml.dom import minidom
 
 try:
     import gzip
@@ -1259,10 +1259,7 @@ class Speedtest(object):
                     )
 
         urls = [
-            '://www.speedtest.net/speedtest-servers-static.php',
-            'http://c.speedtest.net/speedtest-servers-static.php',
-            '://www.speedtest.net/speedtest-servers.php',
-            'http://c.speedtest.net/speedtest-servers.php',
+            'https://www.speedtest.net/api/js/servers?engine=js&limit=10&https_functional=true',
         ]
 
         headers = {}
@@ -1300,7 +1297,28 @@ class Speedtest(object):
                 if int(uh.code) != 200:
                     raise ServersRetrievalError()
 
-                serversxml = ''.encode().join(serversxml_list)
+                serversjsonraw = ''.encode().join(serversxml_list).decode("utf-8")
+
+                serversjson = json.loads(serversjsonraw)
+
+                doc = minidom.Document()
+
+                settings = doc.createElement('settings')
+                doc.appendChild(settings)
+
+                servers_element = doc.createElement('servers')
+                settings.appendChild(servers_element)
+
+                for server_json in serversjson:
+                    server = doc.createElement("server")
+                    for a in server_json.keys():
+                        server.setAttribute(a, str(server_json[a]))
+                    servers_element.appendChild(server)
+
+                serversxml = str.encode(doc.toprettyxml(indent="\t"))
+                # print(serversxml)
+                # print(doc.toprettyxml(indent="\t"))
+                # print(serversjson)
 
                 printer('Servers XML:\n%s' % serversxml, debug=True)
 

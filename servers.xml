@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <servers>
+        <server url="http://speedtest.homenet.online:8080/speedtest/upload.php" lat="48.4647" lon="35.0462"
+                name="Dnipro" country="Ukraine" cc="UA" sponsor="HomeNet.it" id="54212"
+                host="speedtest.homenet.online:8080"/>
+        <server url="http://sp2.snet.dp.ua:8080/speedtest/upload.php" lat="48.4500" lon="34.9833" name="Dnipro"
+                country="Ukraine" cc="UA" sponsor="SNET.DP.UA" id="27511" host="sp2.snet.dp.ua:8080"/>
+        <server url="http://test.fregat.net:8080/speedtest/upload.php" lat="48.4500" lon="34.9833" name="Dnipro"
+                country="Ukraine" cc="UA" sponsor="Fregat ISP" id="23620" host="test.fregat.net:8080"/>
+        <server url="http://sp1.prolvl.net:8080/speedtest/upload.php" lat="48.5231" lon="34.6137" name="Kamianske"
+                country="Ukraine" cc="UA" sponsor="ISP PROLVL" id="33632" host="sp1.prolvl.net:8080"/>
+        <server url="http://speedtest.hn.biz.ua:8080/speedtest/upload.php" lat="48.3229" lon="35.5214"
+                name="Sinelnikovo" country="Ukraine" cc="UA" sponsor="HomeNet ISP" id="17500"
+                host="speedtest.hn.biz.ua:8080"/>
+        <server url="http://speedtest.megalan.net.ua:8080/speedtest/upload.php" lat="48.5957" lon="34.4241"
+                name="Днепровское" country="Ukraine" cc="UA" sponsor="megalan" id="37070"
+                host="speedtest.megalan.net.ua:8080"/>
+        <server url="http://speed.cn.zp.ua:8080/speedtest/upload.php" lat="47.8333" lon="35.1666" name="Zaporizhzhya"
+                country="Ukraine" cc="UA" sponsor="CityNet" id="1724" host="speed.cn.zp.ua:8080"/>
+        <server url="http://mini2.express.net.ua:8080/speedtest/upload.php" lat="47.8333" lon="35.1666"
+                name="Zaporizhzhia" country="Ukraine" cc="UA" sponsor="Express Ltd" id="25594"
+                host="mini2.express.net.ua:8080"/>
+        <server url="http://st5.utelecom.com.ua:8080/speedtest/upload.php" lat="47.8333" lon="35.1666"
+                name="Zaporizhzhya" country="Ukraine" cc="UA" sponsor="PROSTO" id="9239"
+                host="st5.utelecom.com.ua:8080"/>
+        <server url="https://speedtest.16x.zp.ua:8080/speedtest/upload.php" lat="47.8333" lon="35.1666"
+                name="Zaporizhzhya" country="Ukraine" cc="UA" sponsor="16x Network" id="50996"
+                host="speedtest.16x.zp.ua:8080"/>
+    </servers>
+</settings>
